@@ -5,31 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aggretsuko</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Noto+Sans:wght@100;400;700&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/2b614ffe4c.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./assets/style.css" type="text/css" />
   </head>
   <body>
     <header>
+      <img
+        class="titleImage"
+        src="./assets/img/aggretsuko.png"
+        alt="aggretsuko logo"
+      />
       <h1></h1>
     </header>
     <main>
-      <img src="./assets/img/aggretsuko.png" alt="aggretsuko logo" />
+      <img class="retsuko" src="" alt="" />
       <div class="mood-text"></div>
-      <button>Start</button>
-      <p class="alert">
-        <strong>ALERT</strong> upon clicking "Start" a sound will play
-        automatically.
-      </p>
+      <div>
+        <div class="alert">
+          <p><strong>ALERT</strong></p>
+          <p class="alert">
+            upon clicking "Start" a sound will play automatically.
+          </p>
+        </div>
+        <button>Start</button>
+        <br />
+        <div class="controls">
+          <i class="fa-solid fa-plus"></i>
+          <i class="fa-solid fa-play playPause"></i>
+          <i class="fa-solid fa-minus"></i>
+        </div>
+      </div>
+
       <audio src="./assets/audio/main.mp3" loop>
         Your browser does not support the element <code>audio</code>.
       </audio>
-      <i class="fa-solid fa-play"></i>
     </main>
-    <footer class="foot">
-      <span>Danilo Procópio 2022</span>
+    <footer>
+      <p>Danilo Procópio 2022</p>
       <a
         href="https://www.linkedin.com/in/danilo-tadeu-fernandes-da-silva-proc%C3%B3pio-458378213"
         ><i class="fa-brands fa-linkedin-in"></i

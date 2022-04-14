@@ -1,20 +1,23 @@
-const retsukoMood = document.querySelector("img");
+const retsukoMood = document.querySelector(".retsuko");
 const button = document.querySelector("button");
 const moodText = document.querySelector(".mood-text");
 const title = document.querySelector("h1");
 const alert = document.querySelector(".alert");
 const music = document.querySelector("audio");
-const control = document.querySelector(".fa-solid");
+const control = document.querySelector(".playPause");
+const plus = document.querySelector(".fa-plus");
+const minus = document.querySelector(".fa-minus");
+const header = document.querySelector("header");
 let level = 0;
 let play = false;
 const moods = [
   "Calm",
-  "In love",
   "Annoyed",
   "Embarrassed",
+  "In love",
+  "Crying",
   "Determined",
-  "Enraged",
-  "Crying"
+  "Enraged"
 ];
 
 button.addEventListener("click", () => {
@@ -46,4 +49,19 @@ control.addEventListener("click", () => {
     control.classList.replace("fa-play", "fa-pause");
   }
   play = !play;
+});
+
+minus.addEventListener("click", () => {
+  music.volume -= 0.2;
+});
+
+plus.addEventListener("click", () => {
+  music.volume += 0.2;
+});
+
+header.addEventListener("mouseover", () => {
+  header.style["width"] = "100%";
+});
+header.addEventListener("mouseleave", () => {
+  header.style["width"] = "90%";
 });
