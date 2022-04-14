@@ -3,8 +3,12 @@
   margin: 0;
   box-sizing: border-box;
 }
-header{
+header {
   text-align: center;
+}
+html {
+  height: 100%;
+  width: 100%;
 }
 body {
   font-family: "Courier New", Courier, monospace;
@@ -12,20 +16,22 @@ body {
   background-color: black;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   height: 100%;
   width: 100%;
   padding: 5px;
 }
 main {
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
-
-
+a {
+  text-decoration: none;
+}
 img {
   height: 290px;
   width: 360;
@@ -37,15 +43,25 @@ button {
   border-radius: 5px;
   background-color: darkred;
   color: blanchedalmond;
+  font-size: 1.5rem;
 }
 button:hover {
   cursor: pointer;
   border: 1px solid #ffff;
 }
-footer {
+
+.foot {
   margin-top: auto;
 }
 
-main *{
+main * {
   margin: 20px;
+}
+
+.fa-solid {
+  font-size: 2rem;
+}
+.fa-solid:hover {
+  cursor: pointer;
+  color: #ffff;
 }

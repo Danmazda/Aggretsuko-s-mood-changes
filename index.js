@@ -4,8 +4,9 @@ const moodText = document.querySelector(".mood-text");
 const title = document.querySelector("h1");
 const alert = document.querySelector(".alert");
 const music = document.querySelector("audio");
+const control = document.querySelector(".fa-solid");
 let level = 0;
-let clicked = false;
+let play = false;
 const moods = [
   "Calm",
   "In love",
@@ -13,11 +14,11 @@ const moods = [
   "Embarrassed",
   "Determined",
   "Enraged",
-  "Crying",
+  "Crying"
 ];
 
 button.addEventListener("click", () => {
-  alert.remove;
+  alert.remove();
   title.innerText = "Press the button to change Retsuko's mood";
   button.innerText = "Change mood";
   if (level < 6) {
@@ -32,4 +33,17 @@ button.addEventListener("click", () => {
   music.src = `./assets/audio/${currentMood}.mp3`;
   music.load();
   music.play();
+  play = true;
+  control.classList.replace("fa-play", "fa-pause");
+});
+
+control.addEventListener("click", () => {
+  if (play) {
+    music.pause();
+    control.classList.replace("fa-pause", "fa-play");
+  } else {
+    music.play();
+    control.classList.replace("fa-play", "fa-pause");
+  }
+  play = !play;
 });

@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aggretsuko</title>
+    <script
+      src="https://kit.fontawesome.com/2b614ffe4c.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -12,17 +16,28 @@
       <h1></h1>
     </header>
     <main>
-      <img src="./assets/img/aggretsuko.png" alt="aggretsuko logo"/>
+      <img src="./assets/img/aggretsuko.png" alt="aggretsuko logo" />
       <div class="mood-text"></div>
       <button>Start</button>
       <p class="alert">
-        <strong>ALERT</strong> upon clicking "Start" a sound will play automatically.
+        <strong>ALERT</strong> upon clicking "Start" a sound will play
+        automatically.
       </p>
-      <audio src="./assets/audio/main.mp3" controls>
+      <audio src="./assets/audio/main.mp3" loop>
         Your browser does not support the element <code>audio</code>.
       </audio>
+      <i class="fa-solid fa-play"></i>
     </main>
-    <footer>Danilo Procópio 2022</footer>
+    <footer class="foot">
+      <span>Danilo Procópio 2022</span>
+      <a
+        href="https://www.linkedin.com/in/danilo-tadeu-fernandes-da-silva-proc%C3%B3pio-458378213"
+        ><i class="fa-brands fa-linkedin-in"></i
+      ></a>
+      <a href="https://github.com/Danmazda"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+    </footer>
   </body>
   <script src="./index.js"></script>
 </html>
