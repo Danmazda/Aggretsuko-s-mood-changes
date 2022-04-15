@@ -16,7 +16,7 @@ const moods = [
   "In love",
   "Crying",
   "Determined",
-  "Enraged"
+  "Enraged",
 ];
 
 button.addEventListener("click", () => {
@@ -30,9 +30,9 @@ button.addEventListener("click", () => {
   }
   let currentMood = moods[level].toLowerCase().replace(" ", "");
   moodText.innerText = `Retsuko is ${moods[level]}`;
-  retsukoMood.src = `./assets/img/${currentMood}.gif`;
+  retsukoMood.src = `https://res.cloudinary.com/dywi6o163/image/upload/v1649983714/retsuko/images/${currentMood}.gif`;
   retsukoMood.alt = `${moods[level]}`;
-  music.src = `./assets/audio/${currentMood}.mp3`;
+  music.src = `https://res.cloudinary.com/dywi6o163/video/upload/v1649984916/retsuko/music/${currentMood}.mp3`;
   music.load();
   music.play();
   play = true;
