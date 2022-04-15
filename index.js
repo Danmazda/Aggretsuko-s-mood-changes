@@ -2,12 +2,11 @@ const retsukoMood = document.querySelector(".retsuko");
 const button = document.querySelector("button");
 const moodText = document.querySelector(".mood-text");
 const title = document.querySelector("h1");
-const alert = document.querySelector(".alert");
+const deleteOnClick = document.querySelector(".deleteOnClick");
 const music = document.querySelector("audio");
 const control = document.querySelector(".playPause");
 const plus = document.querySelector(".fa-plus");
 const minus = document.querySelector(".fa-minus");
-const header = document.querySelector("header");
 let level = 0;
 let play = false;
 const moods = [
@@ -21,7 +20,7 @@ const moods = [
 ];
 
 button.addEventListener("click", () => {
-  alert.remove();
+  deleteOnClick.remove();
   title.innerText = "Press the button to change Retsuko's mood";
   button.innerText = "Change mood";
   if (level < 6) {
@@ -57,11 +56,4 @@ minus.addEventListener("click", () => {
 
 plus.addEventListener("click", () => {
   music.volume += 0.2;
-});
-
-header.addEventListener("mouseover", () => {
-  header.style["width"] = "100%";
-});
-header.addEventListener("mouseleave", () => {
-  header.style["width"] = "90%";
 });
