@@ -7,6 +7,8 @@ const music = document.querySelector("audio");
 const control = document.querySelector(".playPause");
 const plus = document.querySelector(".fa-plus");
 const minus = document.querySelector(".fa-minus");
+const titleImage = document.querySelector(".titleImage");
+const nihongo = document.querySelector(".nihongo");
 let level = 0;
 let play = false;
 const moods = [
@@ -17,6 +19,15 @@ const moods = [
   "Crying",
   "Determined",
   "Enraged",
+];
+const moodsJP = [
+  "は落ち着いている",
+  "はイライラする",
+  "は恥ずかしい",
+  "は恋をしている",
+  "が泣いている",
+  "が決まった",
+  "は激怒",
 ];
 
 button.addEventListener("click", () => {
@@ -30,6 +41,7 @@ button.addEventListener("click", () => {
   }
   let currentMood = moods[level].toLowerCase().replace(" ", "");
   moodText.innerText = `Retsuko is ${moods[level]}`;
+  nihongo.innerText = `烈子 ${moodsJP[level]}`;
   retsukoMood.src = `https://res.cloudinary.com/dywi6o163/image/upload/v1649983714/retsuko/images/${currentMood}.gif`;
   retsukoMood.alt = `${moods[level]}`;
   music.src = `https://res.cloudinary.com/dywi6o163/video/upload/v1649984916/retsuko/music/${currentMood}.mp3`;
@@ -56,4 +68,8 @@ minus.addEventListener("click", () => {
 
 plus.addEventListener("click", () => {
   music.volume += 0.2;
+});
+
+titleImage.addEventListener("click", () => {
+  window.location.reload(false);
 });
